@@ -57,7 +57,7 @@ Function Remove-WindowsRight {
     [CmdletBinding(SupportsShouldProcess=$true)]
     param(
         [Parameter(Position=0, ValueFromPipeline=$true, ValueFromPipelineByPropertyName=$true, Mandatory=$true)][String[]]$Name,
-        [Parameter(Position=1, Mandatory=$true)][System.Security.Principal.IdentityReference[]]$Account,
+        [Parameter(Position=1, Mandatory=$true)][System.Security.Principal.IdentityReference[]][PSPrivilege.Identity()]$Account,
         [Parameter(Position=2)][String]$ComputerName
     )
 

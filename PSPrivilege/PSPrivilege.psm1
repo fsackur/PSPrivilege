@@ -17,6 +17,7 @@ foreach ($import in @($public + $private)) {
     }
 }
 Import-PInvokeUtil
+Import-IdentityAttribute
 
 # TODO: find some way to enumerate these with an API call instead of hardcoding
 # https://docs.microsoft.com/en-us/windows/desktop/SecAuthZ/privilege-constants

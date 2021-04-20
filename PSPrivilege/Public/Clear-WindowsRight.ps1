@@ -55,7 +55,7 @@ Function Clear-WindowsRight {
     [CmdletBinding(SupportsShouldProcess=$true)]
     param(
         [Parameter(Position=0, ValueFromPipeline=$true, ValueFromPipelineByPropertyName=$true, ParameterSetName="Name", Mandatory=$true)][String[]]$Name,
-        [Parameter(Position=0, ParameterSetName="Account", Mandatory=$true)][System.Security.Principal.IdentityReference[]]$Account,
+        [Parameter(Position=0, ParameterSetName="Account", Mandatory=$true)][System.Security.Principal.IdentityReference[]][PSPrivilege.Identity()]$Account,
         [Parameter(Position=1)][String]$ComputerName
     )
 

@@ -65,7 +65,7 @@ Function Get-WindowsRight {
     [CmdletBinding()]
     param(
         [Parameter(Position=0, ValueFromPipeline=$true, ValueFromPipelineByPropertyName=$true)][String[]]$Name,
-        [Parameter(Position=1)][AllowNull()][System.Security.Principal.IdentityReference]$Account,
+        [Parameter(Position=1)][AllowNull()][System.Security.Principal.IdentityReference][PSPrivilege.Identity()]$Account,
         [Parameter(Position=2)][String]$ComputerName
     )
 
