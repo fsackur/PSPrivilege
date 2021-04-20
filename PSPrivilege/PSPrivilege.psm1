@@ -73,3 +73,9 @@ $psprivilege_rights = @{
 }
 
 Export-ModuleMember -Function $public.Basename
+
+Register-ArgumentCompleter -CommandName $public.Basename -ParameterName Name -ScriptBlock {
+    param ($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameters)
+
+    return $psprivilege_privileges -like "*$wordToComplete"
+}
