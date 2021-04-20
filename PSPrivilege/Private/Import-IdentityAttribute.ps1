@@ -1,6 +1,6 @@
 function Import-IdentityAttribute
 {
-    Add-Type -TypeDefinition @'
+    Add-Type -ReferencedAssemblies System.Security.Principal.Windows, System.Management.Automation -TypeDefinition @'
 using System;
 using System.Security.Principal;
 using System.Management.Automation;

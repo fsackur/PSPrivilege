@@ -3,7 +3,7 @@
 
 Function Import-PInvokeUtil
 {
-    Add-Type -TypeDefinition @'
+    Add-Type -ReferencedAssemblies System.Linq, System.Private.CoreLib, System.Security.Principal.Windows, System.Management.Automation -TypeDefinition @'
 using Microsoft.Win32.SafeHandles;
 using System;
 using System.Collections.Generic;
